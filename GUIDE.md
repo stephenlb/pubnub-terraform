@@ -1,6 +1,46 @@
+## Fast Setup
+
+### Step 1: Clone Repository
+
+Clone repository and navigate to the directory.
+
+```shell
+git clone https://github.com/stephenlb/pubnub-terraform-module.git
+cd pubnub-terraform-module
+```
+
+### Step 2: Edit `terraform.tfvars`
+
+Edit the `terraform.tfvars` file and add your account access details.
+Your account ID can be found in the URL of your account page.
+
+
+### Step 3: Edit `main.tf`
+
+Modify the `main.tf` file to perform the actions you need.
+
+
+### Step 4: Run
+
+> OPTIONAL: When you are using `tfenv` then install the version compatible with this module.
+
+```shell
+tfenv install 1.9.5
+tfenv use 1.9.5
+```
+
+Ready to go!
+
+```shell
+terraform init
+terraform apply
+```
+
+That's it! There's more details on the instructions below. However, you can stop here if everything worked.
+
 Here's a step-by-step guide on how to the PubNub Terrafor Module. Save the files, and run `terraform apply` commands to provision your PubNub App, API Key, and Illuminate setup.
 
-### Step-by-Step Instructions
+### Advanced Step-by-Step Instructions
 
 #### Step 1: Prepare the Directory Structure
 
@@ -13,7 +53,7 @@ cd terraform/pubnub_module_example
 
 #### Step 2: Create the Module Files
 
-Copy the necessary files for the Terraform module files `main.tf`, `variables.tf`, and `outputs.tf` to the `./pubnub` directory we created in Step 1.
+Copy the necessary files for the Terraform module files in `./pubnub` directory which are: `main.tf`, `variables.tf`, and `outputs.tf`.
 
 #### Step 3: Create the Main Configuration File
 
