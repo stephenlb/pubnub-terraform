@@ -83,3 +83,59 @@ variable "objects" {
   type = number
   default = 0
 }
+
+variable "illuminate_base_url" {
+  description = "Base URL for the Illuminate API"
+  type = string
+}
+
+variable "business_object_name" {
+  description = "Name of the Illuminate Business Object"
+  type = string
+}
+
+variable "business_object_description" {
+  description = "Description of the Illuminate Business Object"
+  type = string
+}
+
+variable "business_object_fields" {
+  description = "Fields for the Illuminate Business Object"
+  type = list(object({
+    name = string
+    jsonFieldType = string
+    isKeyset = bool
+    source = string
+    jsonPath = string
+  }))
+}
+
+variable "dashboard_name" {
+  description = "Name of the Illuminate Dashboard"
+  type = string
+}
+
+variable "dashboard_date_range" {
+  description = "Date range for the Illuminate Dashboard"
+  type = string
+  default = "30 minutes"
+}
+
+variable "dashboard_charts" {
+  description = "Charts for the Illuminate Dashboard"
+  type = list(object({
+    name = string
+    metricId = string
+    metric = object({
+      name = string
+      measureId = string
+      businessObjectId = string
+      function = string
+      dimensionIds = list(string)
+      evaluationWindow = number
+    })
+    viewType = string
+    size = string
+    dimensionIds = list(string)
+  }))
+}
