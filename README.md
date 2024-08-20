@@ -20,7 +20,7 @@ To use this module, include it in your Terraform configuration and provide the n
 
 ```hcl
 module "pubnub" {
-  source = "./pubnub"  # path to your module
+  source = "github.com/stephenlb/pubnub-terraform-module" # path to your module
 
   email               = var.pubnub_email
   password            = var.pubnub_password
@@ -83,7 +83,7 @@ Below is an example of how to use this module:
 provider "http" {}
 
 module "pubnub" {
-  source = "github.com/your-org/pubnub-terraform-module"
+  source = "github.com/stephenlb/pubnub-terraform-module"
 
   email               = "your-email@example.com"
   password            = "your-password"
