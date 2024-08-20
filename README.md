@@ -2,6 +2,10 @@
 
 This Terraform module provisions a new PubNub App, an associated API Key, and sets up an Illuminate Business Object and Dashboard in an idempotent way.
 
+## Step-by-Step Guid
+
+See the [GUIDE.md](GUIDE.md) file for details.
+
 ## Table of Contents
 
 - [PubNub Terraform Module with Illuminate Integration](#pubnub-terraform-module-with-illuminate-integration)
